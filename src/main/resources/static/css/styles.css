@@ -1,0 +1,56 @@
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, "Noto Sans";
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+    min-height: 100vh;
+    color: #212529;
+}
+
+.navbar-brand { font-weight: 600; }
+
+.card {
+    border-radius: 12px;
+}
+
+.card .card-body { padding: 1rem; }
+
+.note-text {
+    font-size: 1rem;
+    line-height: 1.35;
+    max-height: 6.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.note-actions .btn {
+    min-width: 40px;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+}
+
+.btn-primary {
+    border-radius: 8px;
+}
+
+.sticky-top {
+    z-index: 1020;
+}
+
+@media (max-width: 991px) {
+    .sticky-top { position: static !important; top: 0; }
+    .note-text { -webkit-line-clamp: 4; }
+}
+
+@media (max-width: 576px) {
+    .navbar .input-group { display: none; }
+    .card { border-radius: 10px; }
+    .note-text { -webkit-line-clamp: 3; }
+}
+
+.card .note-meta { font-size: 0.85rem; color: #6c757d; }
+.card .note-meta i { margin-right: 6px; }
